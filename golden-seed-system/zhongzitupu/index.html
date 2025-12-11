@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>幼种图谱移动采集系统 - 主应用</title>
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/component.css">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/toast.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <div class="main-container">
+            <div class="app-header">
+                <div class="app-logo">
+                    <div class="app-logo-icon">
+                        <i class="fas fa-seedling"></i>
+                    </div>
+                    <div class="app-logo-text">幼种计划</div>
+                </div>
+                <div class="app-title">移动采集系统</div>
+                <div class="app-subtitle">便捷高效的农业数据采集工具</div>
+                <div class="user-menu" id="userMenu">
+                    <i class="fas fa-user"></i>
+                </div>
+
+                <!-- 个人中心下拉菜单 -->
+                <div class="profile-dropdown" id="profileDropdown">
+                    <div class="dropdown-header">
+                        <div class="dropdown-avatar">
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <div class="dropdown-user-info">
+                            <h4>幼种计划</h4>
+                            <p>农业研究员 | 幼种计划项目组</p>
+                        </div>
+                    </div>
+                    <div class="dropdown-stats">
+                        <div class="dropdown-stat">
+                            <div class="dropdown-stat-number">156</div>
+                            <div class="dropdown-stat-label">采集任务</div>
+                        </div>
+                        <div class="dropdown-stat">
+                            <div class="dropdown-stat-number">2,847</div>
+                            <div class="dropdown-stat-label">样本数量</div>
+                        </div>
+                        <div class="dropdown-stat">
+                            <div class="dropdown-stat-number">98%</div>
+                            <div class="dropdown-stat-label">完成率</div>
+                        </div>
+                    </div>
+                    <div class="dropdown-menu">
+                        <div class="dropdown-item" id="dropdownProfile">
+                            <i class="fas fa-user-circle"></i>
+                            <span>个人信息</span>
+                        </div>
+                        <div class="dropdown-item">
+                            <i class="fas fa-cog"></i>
+                            <span>消息通知</span>
+                        </div>
+                    </div>
+                    <div class="dropdown-footer">
+                        <button class="dropdown-logout" id="dropdownLogout">
+                             <a href="longin.html" class="back-button">
+                        <i class="fas fa-sign-out-alt"></i> 返回主界面
+                    </a>
+                           
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="main-content">
+                <div class="sidebar">
+                    <div class="nav-tabs">
+                        <div class="nav-tab active" data-tab="data-collection">
+                            <i class="fas fa-database"></i>数据采集
+                        </div>
+                        <div class="nav-tab" data-tab="quick-collection">
+                            <i class="fas fa-bolt"></i>快速采集
+                        </div>
+                        <div class="nav-tab" data-tab="field-search">
+                            <i class="fas fa-search"></i>幼种编号查询
+                        </div>
+                        <div class="nav-tab" data-tab="history">
+                            <i class="fas fa-history"></i>采集记录
+                        </div>
+                    </div>
+                     <button id="logoutBtn">
+                        
+                    </button>
+                </div>
+                <div class="content-area">
+                    
+                    <!-- 数据采集页面 -->
+                    <div class="tab-content active" id="data-collection">
+                        <h3 class="section-title">数据采集功能</h3>
+                        <div class="function-cards">
+                            <div class="function-card" data-collection="crop">
+                                <i class="fas fa-seedling"></i>
+                                <h3>幼种监测</h3>
+                            </div>
+                            <div class="function-card" data-collection="weather">
+                                <i class="fas fa-cloud-sun"></i>
+                                <h3>环境数据</h3>
+                                <p>采集生长环境数据</p>
+                            </div>
+                            <div class="function-card" data-collection="pest">
+                                <i class="fas fa-bug"></i>
+                                <h3>病虫害记录</h3>
+                                <p>记录病虫害发生情况和防治措施</p>
+                            </div>
+                            <div class="image-collection" id="imageCollection">
+                                <i class="fas fa-camera"></i>
+                                <h3>图像采集</h3>
+                                <p>上传幼种图像，用于表型分析</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- 快速采集页面 -->
+                    <div class="tab-content" id="quick-collection">
+                        <h3 class="section-title">快速采集</h3>
+                        <div class="function-cards">
+                            <div class="function-card" data-collection="quick">
+                                <i class="fas fa-bolt"></i>
+                                <h3>一键采集</h3>
+                                <p>快速记录基础数据</p>
+                            </div>
+                            <div class="function-card" data-collection="location">
+                                <i class="fas fa-map-marked-alt"></i>
+                                <h3>位置记录</h3>
+                                <p>记录采集位置</p>
+                            </div>
+                            <div class="function-card" data-collection="template">
+                                <i class="fas fa-clipboard-list"></i>
+                                <h3>模板采集</h3>
+                                <p>使用预设模板快速记录</p>
+                            </div>
+                            <div class="image-collection" id="quickImageCollection">
+                                <i class="fas fa-camera"></i>
+                                <h3>图像采集</h3>
+                                <p>上传图像</p>
+                            </div>
+                        </div>   
+                    </div>
+                    
+                    <!-- 幼种编号查询页面 -->
+                    <div class="tab-content" id="field-search">
+                        <h3 class="section-title">幼种编号查询</h3>
+                        
+                        <!-- 添加上传下载按钮 -->
+                    
+                        <div class="search-box">
+                            <div class="form-group">
+                                <div class="search-input">
+                                    <input type="text" class="form-input" id="field-search-input" placeholder="输入幼种编号，如：25KY00076">
+                                    <button class="search-btn" id="searchFieldBtn">查询</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="gene-library">
+                            <div class="gene-title">2025幼种数据库</div>
+                            <table class="field-table">
+                                <thead>
+                                    <tr>
+                                        <th>幼种编号(全部)</th>
+                                        <th>图像的查看与下载</th>
+                                        <th>序号</th>
+                                        <th>备注1</th>
+                                        <th>操作</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="field-table-body">
+                                    <!-- 表格数据将通过JavaScript动态生成 -->
+                                </tbody>
+                            </table>
+                            <div class="pagination">
+                                <button class="pagination-btn" id="prevPage">上一页</button>
+                                <div class="pagination-info" id="pageInfo">1/10</div>
+                                <button class="pagination-btn" id="nextPage">下一页</button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                 <!-- 采集历史页面 -->
+                 <div class="tab-content" id="history">
+                     <h3 class="section-title">采集记录</h3>
+                    <div class="data-list">
+                         <div class="data-item" data-id="1">
+                             <div class="data-info">
+                               <h4>幼种突变体表型记录</h4>
+                               <p>2025-10-19 14:30 | 样本数: 24</p>
+                            </div>
+                             <div class="data-status">
+                              <span class="status-badge status-completed">已完成</span>
+                            </div>
+                        </div>
+                         <div class="data-item" data-id="2">
+                            <div class="data-info">
+                              <h4>幼种生长数据采集</h4>
+                                 <p>2025-1-18 09:15 | 样本数: 36</p>
+                                 </div>
+                                <div class="data-status">
+                                    <span class="status-badge status-completed">已完成</span>
+                                </div>
+                        </div>
+                        <div class="data-item" data-id="3">
+                            <div class="data-info">
+                                    <h4>幼种环境数据记录</h4>
+                                    <p>2025-1-19 16:45 | 记录点: 8个</p>
+                            </div>
+                            <div class="data-status">
+                                    <span class="status-badge status-pending">处理中</span>
+                            </div>
+                        </div>
+                            <div class="data-item" data-id="4">
+                                <div class="data-info">
+                                    <h4>幼种基因型鉴定</h4>
+                                    <p>2025-1-20 11:20 | 样本数: 42</p>
+                                </div>
+                                <div class="data-status">
+                                    <span class="status-badge status-completed">已完成</span>
+                                </div>
+                            </div>
+                            <div class="data-item" data-id="5">
+                                <div class="data-info">
+                                    <h4>幼种病虫害详细记录</h4>
+                                    <p>2025-1-28 14:30 | 样本数: 24</p>
+                                </div>
+                                <div class="data-status">
+                                    <span class="status-badge status-completed">已完成</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+
+    <!-- 模态框组件 -->
+    <script  type="text/html" src="modal.html" ></script>
+    
+    <script src="js/utils.js"></script>
+    <script src="js/database.js"></script>
+    <script src="js/constants.js"></script>
+    <script src="js/index.js"></script> 
+    <script src="js/toast.js"></script>
+   
+ 
+</body>
+</html>
