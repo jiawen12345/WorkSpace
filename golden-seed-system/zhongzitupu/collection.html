@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>图谱移动采集系统 - 数据采集</title>
+     <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/component.css">
+    <link rel="stylesheet" href="css/collection.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <div class="main-container">
+            <div class="app-header">
+                <div class="app-logo">
+                    <div class="app-logo-icon">
+                        <i class="fas fa-seedling"></i>
+                    </div>
+                    <div class="app-logo-text">幼种计划</div>
+                </div>
+                <div class="app-title" id="detailTitle">数据采集</div>
+                <div class="app-subtitle">图像采集与管理</div>
+            </div>
+            
+            <div class="content-area">
+                <div class="collection-detail">
+                    <a href="index.html" class="back-button">
+                        <i class="fas fa-arrow-left"></i> 返回主界面
+                    </a>
+                    <div class="detail-header">
+                        <h2 class="detail-title" id="collectionTitle">图像采集</h2>
+                        <div class="field-info" id="fieldInfo"></div>
+                    </div>
+                          
+                    <!-- 图片上传区域 -->
+                    <div class="upload-container" id="uploadContainer">
+                        <div class="upload-icon">
+                            <i class="fas fa-cloud-upload-alt"></i>
+                        </div>
+                        <div class="upload-text">上传幼种图像</div>
+                        <div class="upload-subtext">支持 JPG、PNG 格式，最大 5MB</div>
+                        <button class="upload-btn" id="uploadTrigger">
+                            <i class="fas fa-plus"></i> 选择图片
+                        </button>
+                        <input type="file" id="imageInput" class="file-input" accept="image/*" multiple>
+                    </div>
+                    
+                    <!-- 图片预览区域 -->
+                    <div class="image-preview-container" id="imagePreviewContainer">
+                        <div class="preview-title">已上传图片</div>
+                        <div class="image-preview" id="imagePreview">
+                            <!-- 图片预览将动态生成 -->
+                        </div>
+                    </div>
+                    
+                    <div class="detail-form">
+                        <div class="form-group">
+                            <label class="form-label" for="collection-name">采集名称</label>
+                            <input type="text" class="form-input" id="collection-name" placeholder="请输入采集名称">
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label" for="collection-location">采集位置</label>
+                            <input type="text" class="form-input" id="collection-location" placeholder="请输入采集位置">
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label class="form-label" for="collection-sample">样本数量</label>
+                                <input type="number" class="form-input" id="collection-sample" placeholder="请输入样本数量">
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label" for="collection-date">采集日期</label>
+                                <input type="date" class="form-input" id="collection-date">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label" for="collection-notes">备注信息</label>
+                            <textarea class="form-input" id="collection-notes" placeholder="请输入备注信息" rows="3"></textarea>
+                        </div>
+                        <button class="submit-btn" id="submitCollection">提交采集数据</button>
+                    </div>   
+                </div>
+            </div>
+        </div>
+    </div>
+
+   
+
+    <script src="js/utils.js"></script>
+    <script src="js/database.js"></script>
+    <script src="js/constants.js"></script>
+    <script src="js/collection.js"></script>
+</body>
+</html>
