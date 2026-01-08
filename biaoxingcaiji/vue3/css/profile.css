@@ -1,0 +1,350 @@
+  /* 个人中心样式 */
+ .profile-section {
+     background: white;
+     border-radius: 12px;
+     padding: 30px;
+     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+     margin-bottom: 25px;
+ }
+ 
+ .profile-header {
+     display: flex;
+     align-items: center;
+     margin-bottom: 30px;
+     padding-bottom: 20px;
+     border-bottom: 1px solid #e8f4e3;
+ }
+ 
+ .profile-avatar {
+     width: 80px;
+     height: 80px;
+     border-radius: 50%;
+     background: linear-gradient(135deg, #5a7d3c 0%, #4a6a30 100%);
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     margin-right: 20px;
+ }
+ 
+ .profile-avatar i {
+     font-size: 32px;
+     color: white;
+ }
+ 
+ .profile-info h3 {
+     font-size: 22px;
+     color: #2d5016;
+     margin-bottom: 5px;
+ }
+ 
+ .profile-info p {
+     color: #7a8c6a;
+     font-size: 14px;
+ }
+ 
+ .profile-stats {
+     display: grid;
+     grid-template-columns: repeat(3, 1fr);
+     gap: 20px;
+     margin-bottom: 30px;
+ }
+ 
+ .stat-card {
+     background: linear-gradient(135deg, #f9fdf6 0%, #e8f4e3 100%);
+     border-radius: 10px;
+     padding: 20px;
+     text-align: center;
+     border: 1px solid #d0e0c3;
+ }
+ 
+ .stat-number {
+     font-size: 28px;
+     font-weight: bold;
+     color: #5a7d3c;
+     margin-bottom: 5px;
+ }
+ 
+ .stat-label {
+     font-size: 14px;
+     color: #7a8c6a;
+ }
+ 
+ .profile-details {
+     margin-top: 30px;
+ }
+ 
+ .detail-item {
+     display: flex;
+     justify-content: space-between;
+     padding: 15px 0;
+     border-bottom: 1px solid #e8f4e3;
+ }
+ 
+ .detail-item:last-child {
+     border-bottom: none;
+ }
+ 
+ .detail-label {
+     color: #5a7d3c;
+     font-weight: 500;
+ }
+ 
+ .detail-value {
+     color: #2d5016;
+ }
+ 
+ .edit-btn {
+     background-color: #5a7d3c;
+     color: white;
+     border: none;
+     border-radius: 6px;
+     padding: 8px 16px;
+     cursor: pointer;
+     font-size: 14px;
+     transition: all 0.3s;
+ }
+ 
+ .edit-btn:hover {
+     background-color: #4a6a30;
+ }
+ 
+ /* 新增个人中心下拉菜单样式 */
+ .profile-dropdown {
+     position: absolute;
+     top: 60px;
+     right: 30px;
+     background-color: rgb(76, 112, 47);
+     border-radius: 8px;
+     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+     width: 280px;
+     z-index: 100;
+     overflow: hidden;
+     display: none;
+ }
+ 
+ .profile-dropdown.active {
+     display: block;
+ }
+ 
+ .dropdown-header {
+     padding: 20px;
+     background: linear-gradient(135deg, #5a7d3c 0%, #4a6a30 100%);
+     color: white;
+     display: flex;
+     align-items: center;
+ }
+ 
+ .dropdown-avatar {
+     width: 50px;
+     height: 50px;
+     border-radius: 50%;
+     background: rgba(255, 255, 255, 0.2);
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     margin-right: 15px;
+ }
+ 
+ .dropdown-avatar i {
+     font-size: 20px;
+     color: rgb(255, 255, 255);
+ }
+ 
+ .dropdown-user-info h4 {
+     font-size: 16px;
+     margin-bottom: 5px;
+ }
+ 
+ .dropdown-user-info p {
+     font-size: 12px;
+     opacity: 0.9;
+ }
+ 
+ .dropdown-stats {
+     display: flex;
+     padding: 15px 20px;
+     background-color: #f9fdf6;
+     border-bottom: 1px solid #e8f4e3;
+ }
+ 
+ .dropdown-stat {
+     flex: 1;
+     text-align: center;
+ }
+ 
+ .dropdown-stat-number {
+     font-size: 18px;
+     font-weight: bold;
+     color: #5a7d3c;
+     margin-bottom: 5px;
+ }
+ 
+ .dropdown-stat-label {
+     font-size: 12px;
+     color: #7a8c6a;
+ }
+ 
+ .dropdown-menu {
+     padding: 10px 0;
+ }
+ 
+ .dropdown-item {
+     padding: 12px 20px;
+     display: flex;
+     align-items: center;
+     cursor: pointer;
+     transition: all 0.3s;
+ }
+ 
+ .dropdown-item:hover {
+     background-color: #425f29;
+ }
+ 
+ .dropdown-item i {
+     width: 20px;
+     margin-right: 10px;
+     color: #5a7d3c;
+ }
+ 
+ .dropdown-divider {
+     height: 1px;
+     background-color: #e8f4e3;
+     margin: 5px 0;
+ }
+ 
+ .dropdown-footer {
+     padding: 10px 20px;
+     background-color: #f9fdf6;
+     border-top: 1px solid #e8f4e3;
+ }
+ 
+ .dropdown-logout {
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     width: 100%;
+     padding: 10px;
+     background-color: #f9fdf6;
+     color: #5a7d3c;
+     border: 1px solid #d0e0c3;
+     border-radius: 6px;
+     cursor: pointer;
+     font-weight: 600;
+     transition: all 0.3s;
+ }
+ 
+ .dropdown-logout:hover {
+     background-color: #e8f4e3;
+ }
+ 
+ .dropdown-logout i {
+     margin-right: 8px;
+ }
+ 
+ /* 个人信息详情页样式 */
+ .profile-detail-page {
+     background-color: white;
+     border-radius: 12px;
+     padding: 25px;
+     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+     margin-bottom: 20px;
+ }
+ 
+ .profile-detail-header {
+     text-align: center;
+     margin-bottom: 25px;
+ }
+ 
+ .profile-detail-avatar {
+     width: 100px;
+     height: 100px;
+     border-radius: 50%;
+     background: linear-gradient(135deg, #5a7d3c 0%, #4a6a30 100%);
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     margin: 0 auto 20px;
+ }
+ 
+ .profile-detail-avatar i {
+     font-size: 40px;
+     color: white;
+ }
+ 
+ .profile-detail-title {
+     font-size: 24px;
+     color: #2d5016;
+     margin-bottom: 10px;
+ }
+ 
+ .profile-detail-subtitle {
+     color: #7a8c6a;
+     font-size: 16px;
+ }
+ 
+ .profile-detail-stats {
+     display: grid;
+     grid-template-columns: repeat(3, 1fr);
+     gap: 15px;
+     margin-bottom: 30px;
+ }
+ 
+ .profile-detail-stat {
+     background: linear-gradient(135deg, #f9fdf6 0%, #e8f4e3 100%);
+     border-radius: 10px;
+     padding: 15px;
+     text-align: center;
+     border: 1px solid #d0e0c3;
+ }
+ 
+ .profile-detail-stat-number {
+     font-size: 24px;
+     font-weight: bold;
+     color: #5a7d3c;
+     margin-bottom: 5px;
+ }
+ 
+ .profile-detail-stat-label {
+     font-size: 14px;
+     color: #7a8c6a;
+ }
+ 
+ .profile-detail-form {
+     margin-top: 20px;
+ }
+ 
+ .profile-detail-actions {
+     display: flex;
+     gap: 15px;
+     margin-top: 25px;
+ }
+ 
+ .profile-save-btn, .profile-cancel-btn {
+     flex: 1;
+     padding: 12px;
+     border: none;
+     border-radius: 8px;
+     font-size: 16px;
+     font-weight: 600;
+     cursor: pointer;
+     transition: all 0.3s;
+ }
+ 
+ .profile-save-btn {
+     background-color: #5a7d3c;
+     color: white;
+ }
+ 
+ .profile-save-btn:hover {
+     background-color: #4a6a30;
+ }
+ 
+ .profile-cancel-btn {
+     background-color: #e8f4e3;
+     color: #5a7d3c;
+     border: 1px solid #d0e0c3;
+ }
+ 
+ .profile-cancel-btn:hover {
+     background-color: #d0e0c3;
+ }

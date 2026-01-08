@@ -1,0 +1,45 @@
+:root {
+  /* 主色调 */
+  --primary-color: #5a7d3c;
+  --primary-dark: #4a6a30;
+  --primary-light: #7ba052;
+  
+  /* 文本颜色 */
+  --text-primary: #2d5016;
+  --text-secondary: #5a7d3c;
+  --text-light: #7a8c6a;
+  --text-muted: #8a9c7a;
+  
+  /* 背景颜色 */
+  --bg-primary: #f9fdf6;
+  --bg-secondary: #e8f4e3;
+  --bg-tertiary: #f0f7ea;
+  --bg-white: #ffffff;
+
+  
+  /* 边框颜色 */
+  --border-color: #76b345;
+  --border-light: #0b1407;
+  
+  /* 状态颜色 */
+  --success-color: #2ecc71;
+  --error-color: #e74c3c;
+  --warning-color: #f39c12;
+  
+  /* 阴影 */
+  --shadow-light: 0 4px 8px rgba(0, 0, 0, 0.05);
+  --shadow-medium: 0 6px 12px rgba(0, 0, 0, 0.1);
+  
+  /* 圆角 */
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  
+  /* 间距 */
+  --space-xs: 5px;
+  --space-sm: 10px;
+  --space-md: 15px;
+  --space-lg: 20px;
+  --space-xl: 25px;
+  --space-xxl: 30px;
+}
